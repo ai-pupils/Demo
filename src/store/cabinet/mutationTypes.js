@@ -1,0 +1,1 @@
+export const LOAD_CABINETS = 'LOAD_CABINETS';

@@ -1,0 +1,15 @@
+$--font-path: '~element-ui/lib/theme-chalk/fonts'; // 必需
+
+// theme全局变量
+$--table-header-background: #eef1f6;
+$--table-text-color: #1f2d3d;
+$--table-header-color: #1f2d3d !default;
+$--table-border: 1px solid #dfe6ec;
+
+// 修改table表头字体颜色
+.el-table thead {
+    color: #1f2d3d !important;
+    font-weight: 500;
+}
+
+@import "~element-ui/packages/theme-chalk/src/index";

@@ -1,0 +1,52 @@
+@import (less) "./vars.less";
+@import (less) "./highlightjs.less";
+
+.preview {
+  overflow: hidden;
+  color: #323232;
+  &-bd {
+    width: 100%;
+    text-align: center;
+    background: #f7f7f7;
+    box-sizing: border-box;
+    padding: 24px;
+  }
+
+  &-image {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    height: 100%;
+    .MX-flex-vertical;
+    &-placeholder {
+      display: inline-block;
+      max-width: 100%;
+      max-height: 100%;
+      position: relative;
+      z-index: 1;
+      img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+  &-result {
+    margin-top: 12px;
+    &-title {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1;
+      border-left: 3px solid #323232;
+      padding-left: .5em;
+      margin-bottom: 18px;
+    }
+  }
+  &-note {
+    line-height: 1.6;
+  }
+  &-object {
+    margin: 0;
+  }
+
+}

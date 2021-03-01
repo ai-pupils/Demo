@@ -1,0 +1,125 @@
+
+.subpage {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  @menu-width: 180px;
+
+  & &-menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: @menu-width;
+    height: 100%;
+    background: #fff;
+    color: #495061;
+    font-size: 12px;
+    overflow: hidden;
+    z-index: 9;
+    transition: transform .2s linear;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 100%;
+      background: #dddee1;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+    }
+
+    &-title {
+      color: #999;
+      background: #D9DEE4;
+    }
+    a {
+      color: inherit;
+    }
+    .menu-link {
+      padding: 8px 12px;
+      font-size: 12px;
+    }
+  }
+
+  &__toggle {
+    .subpage {
+      &-menu {
+        overflow: visible;
+        transform: translateX(-@menu-width);
+      }
+      &-content {
+        margin-left: 0;
+      }
+      &-toggle {
+        transform: rotate(180deg);
+        left: 100%;
+        right: auto;
+      }
+    }
+  }
+
+  &-toggle {
+    position: absolute;
+    top: 50%;
+    z-index: 9;
+    right: 0;
+    margin-top: -26px / 2;
+  }
+
+  .btn {
+    @bgc: #e9eaec;
+    @w: 24px;
+    &-toggle {
+      color: #80848f;
+      background-color: @bgc;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      height: 26px;
+      width: 24px;
+      padding: 2px 0 0;
+      transform: translateX(6px);
+      transition: transform .2s linear;
+      box-sizing: border-box;
+      position: relative;
+      &:after, &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        z-index: 2;
+        left: 0;
+        width: 100%;
+        border-width: @w / 4 @w / 2;
+        border-style: solid;
+      }
+      &:after {
+        bottom: 100%;
+        border-color: transparent @bgc @bgc transparent;
+      }
+      &:before {
+        top: 100%;
+        border-color: @bgc @bgc transparent transparent;
+      }
+      &:hover {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  .ivu-menu {
+    width: 100%;
+  }
+
+  &-content {
+    margin-left: @menu-width;
+    height: 100%;
+    overflow-y: auto;
+    flex: 1;
+    box-sizing: border-box;
+  }
+}

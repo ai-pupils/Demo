@@ -1,0 +1,6 @@
+build/*.js
+config/*.js
+
+src/utils/exif.js
+src/**/*.ts
+src/**/*.vue

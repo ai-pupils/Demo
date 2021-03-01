@@ -1,0 +1,180 @@
+@import (less) "./_reset.less";
+@import (less) "./_subpage.less";
+@import (less) "./_misc.less";
+@import (less) "./preview.less";
+
+html,body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #eee;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+.tar {
+  text-align: right;
+}
+
+.pull-right {
+  float: right;
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.btn {
+  outline: none;
+  background-color: transparent;
+}
+
+.el-table {
+  margin: 1em auto;
+
+  th, td {
+    padding: 8px;
+  }
+}
+
+.label {
+  padding: 2px 5px;
+  border: solid 1px #dddee1;
+  border-radius: 4000px;
+  font-size: 0.8em;
+  background: #eee;
+}
+
+.label-success {
+  background: #19be6b;
+  border-color: #19be6b;
+  color: #fff;
+}
+
+.label-error {
+  background: #ed3f14;
+  border-color: #ed3f14;
+  color: #fff;
+}
+
+table {
+  margin: 0;
+}
+
+.status-box {
+  height: 340px;
+  position: relative;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix {
+  display: block;
+  zoom: 1;
+  &:after {
+    content: "";
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+.hover-pointer{
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.pr {
+  position: relative;
+}
+
+.pa {
+  position: absolute;
+}
+
+.mb5 {
+  margin-bottom: 5px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+.ml20 {
+  margin-left: 20px;
+}
+
+.ml5 {
+  margin-left: 5px;
+}
+
+.ml50 {
+  margin-left: 50px;
+}
+
+.ml-50{
+  margin-left: 50px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.card-statistics-title {
+  font-size: 18px;
+  text-align: center
+}
+
+.info-title {
+  border-left: 3px solid #2d8cf0;
+  padding-left: 15px;
+  margin: 20px 0;
+}
+
+.info-box {
+  padding-left: 23px;
+  .ivu-form-item {
+    width: 95%;
+  }
+  .ivu-form-item-content {
+    word-break: break-all;
+  }
+}
+
+.info-box .ivu-form-item-label {
+  font-weight: bold;
+}
+
+.ellipsis{
+  overflow: hidden;
+  word-break: normal;
+  text-overflow: ellipsis;
+  word-spacing: normal;
+  white-space: nowrap;
+}
+
+.inherit-color {
+  color: inherit;
+}
