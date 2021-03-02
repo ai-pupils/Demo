@@ -3,7 +3,10 @@
     input#file(type="file" v-on:change="handleFileChange")
     #wrapper
       img#img(:src="src")
-      div#tag(v-for="(tag, index) in tags" :key="index" :style="{width: tag.box[2]*100+'px', height: tag.box[3]*100+'px', left: tag.box[0]*100+'%', top: tag.box[1]*100+'%'}")
+      div#tag(v-for="(tag, index) in tags" :key="index" :style="{width: tag.box[2]*100+'%', height: tag.box[3]*100+'%', left: tag.box[0]*100+'%', top: tag.box[1]*100+'%'}")
+        div.id {{index+1}}
+    #tag-list
+      Tag(style="margin-top:20px" v-for="(tag, index) in tags" :key="index") {{`${index+1} ${tag.type}`}}
 </template>
 
 
@@ -39,11 +42,11 @@ export default class Demo extends Vue {
     fd.append('search', f, f.name);
 
     http.request({
-      url: 'http://localhost:50080/service/detect/cloth-70cats-all-global-1',
+      url: process.env.url,
       method: 'get',
       data: fd,
       headers: {'Content-Type': 'multipart/form-data'}
-    }).then((res:any) => {
+    }).then((res: any) => {
       this.tags = res.data.boxes_detected
     });
   }
@@ -55,6 +58,7 @@ export default class Demo extends Vue {
 #file {
   margin-bottom: 20px;
 }
+
 #wrapper {
   position: relative;
   width: 600px;
@@ -71,5 +75,10 @@ export default class Demo extends Vue {
   position: absolute;
   border: 1px solid white;
   z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 18px;
 }
 </style>
